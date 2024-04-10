@@ -1,4 +1,4 @@
-class NameGenderController < ApplicationController
+class Api::V1::NameGenderController < ApplicationController
   def gender
     def gender
       name = params[:name]

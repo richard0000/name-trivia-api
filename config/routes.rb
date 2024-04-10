@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'name_gender/gender'
-  get 'name_gender/famous_people'
-  post 'name_gender/send_info'
+  get 'api/v1/name-gender/gender'
+  get 'api/v1/name-gender/famous-people'
+  post 'api/v1/name-gender/send-info'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
