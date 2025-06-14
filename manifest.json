@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Google Meet Poker Planning",
+  "version": "1.0",
+  "description": "Poker planning integration for Google Meet",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://meet.google.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://meet.google.com/*"],
+      "js": ["content.js"],
+      "css": ["panel/panel.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "images/favicon.ico",
+      "32": "images/favicon.ico",
+      "48": "images/favicon.ico",
+      "128": "images/favicon.ico"
+    }
+  },
+  "icons": {
+    "16": "images/favicon.ico",
+    "32": "images/favicon.ico",
+    "48": "images/favicon.ico",
+    "128": "images/favicon.ico"
+  },
+  "web_accessible_resources": [{
+    "resources": ["panel/panel.html"],
+    "matches": ["*://meet.google.com/*"]
+  }]
+}
